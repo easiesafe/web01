@@ -1,0 +1,77 @@
+<?php include('server.php'); ?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Page</title>
+    <style>
+        body {
+  background: #007bff;
+  background: linear-gradient(to right, #1f80ff, hsl(34, 100%, 92%));
+}
+
+.btn-login {
+  font-size: 0.9rem;
+  letter-spacing: 0.05rem;
+  padding: 0.75rem 1rem;
+}
+
+#cl {
+      color: gray;
+        }
+
+    </style>
+     <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap.bundle.min.js">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+          <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+            <div class="card border-0 shadow rounded-3 my-5">
+              <div class="card-body p-4 p-sm-5">
+    <div class="header">
+      <img src="image/MAID.png" style="width: 20%;height: 20%;"><text x="50%" y="50%" fill="#aaa" dy=".3em" ><b></b></text>
+        <h5 class="card-title text-center">Register</h5>
+    </div>
+    
+    <form action="register_db.php">
+
+          <div class="form-floating mb-3">
+            <input type="username" class="form-control" id="username" placeholder="">
+            <label for="uername">Username</label>
+          </div>
+
+          <div class="form-floating mb-3">
+            <input type="name" class="form-control" id="name" placeholder="">
+            <label for="name">Name</label>
+          </div>
+
+          <div class="form-floating mb-3">
+            <input type="lastname" class="form-control" id="lastname" placeholder="">
+            <label for="lastname">Lastname</label>
+          </div>
+
+          <div class="form-floating mb-3">
+            <input type="email" class="form-control" id="email" placeholder="">
+            <label for="email">Email address</label>
+          </div>
+
+          <div class="form-floating mb-3">
+            <input type="password" class="form-control" id="password" placeholder="">
+            <label for="passsword">Password</label>
+          </div>
+          
+          <div class="form-floating ">
+            <button type="button" class="btn btn-primary text-uppercase " onclick="document.location='Login.html'">Submit</button>
+            <p style="text-align:right ;">Already a member? <a href="Login.html">Sign in</a></p>
+  
+          </div><br>
+    </form>
+
+</body>
+</html>

@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>meabann</title>
+
+  <style>
+    /*  */
+    .image_box {
+      width: 100%;
+      height: 404px;
+      overflow: hidden;
+    }
+
+    /*  */
+    #TL-image {
+      display: block;
+      margin: auto;
+      background-image: url("image/01.jpg");
+      /* The image used */
+      /* height: 550px;
+      width: 1518px; */
+      /* You must set a specified height */
+      background-position: center;
+      /* Center the image */
+      background-repeat: no-repeat;
+      /* Do not repeat the image */
+      background-size: cover;
+      /* Resize the background image to cover the entire container */
+    }
+
+    #B-fly {
+      position: fixed;
+      right: 10px;
+      bottom: 10px;
+      margin: 1rem;
+    }
+
+    :root {
+      --bg: #ffffff;
+      --color: rgb(129, 79, 255);
+      --font: Montserrat, Roboto, Helvetica, Arial, sans-serif;
+    }
+
+    .wrapper {
+      padding: 1.5rem 0;
+      filter: url('#goo');
+    }
+
+    .button {
+      display: inline-block;
+      text-align: center;
+      background: var(--color);
+      color: var(--bg);
+      font-weight: bold;
+      padding: 1.18em 1.32em 1.03em;
+      line-height: 1;
+      border-radius: 1em;
+      position: relative;
+      min-width: 8.23em;
+      text-decoration: none;
+      font-family: var(--font);
+      font-size: 1.25rem;
+    }
+
+    .button:before,
+    .button:after {
+      width: 4.4em;
+      height: 2.95em;
+      position: absolute;
+      content: "";
+      display: inline-block;
+      background: var(--color);
+      border-radius: 50%;
+      transition: transform 1s ease;
+      transform: scale(0);
+      z-index: -1;
+    }
+
+    .button:before {
+      top: -25%;
+      left: 20%;
+    }
+
+    .button:after {
+      bottom: -25%;
+      right: 20%;
+    }
+
+    .button:hover:before,
+    .button:hover:after {
+      transform: none;
+    }
+
+
+    /* Demo styles */
+
+    body {
+      width: 100%;
+      height: 100%;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: var(--bg)
+    }
+
+    article>p {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      height: 3em;
+
+    }
+  </style>
+
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+
+
+</head>
+
+<body>
+  <main>
+
+    <div class="container">
+      <header
+        class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
+        <a href="/" class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none">
+          <img src="image/MAID.png" style="width: 30%;height: 30%;"><text x="50%" y="50%" fill="#aaa"
+            dy=".3em"><b></b></text>
+          <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap">
+            <use xlink:href="#bootstrap"></use>
+          </svg>
+        </a>
+
+        <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
+          <li><a href="index.html" class="nav-link px-2 link-secondary">Home</a></li>
+          <li><a href="product.html" class="nav-link px-2 link-dark">Product</a></li>
+          <li><a href="history.html" class="nav-link px-2 link-dark">Usage history</a></li>
+          <li><a href="settings.html" class="nav-link px-2 link-dark">Settings</a></li>
+          <li><a href="about.html" class="nav-link px-2 link-dark">About</a></li>
+        </ul>
+
+        <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
+          <input type="search" class="form-control" placeholder="Search..." aria-label="Search">
+        </form>
+
+        <!-- profileUser -->
+        <div class="nav">
+
+          <li class="Profile"><a href="Profile.html">
+              <img src="image/me1.jpg" alt="mdo" width="40" height="40" class="rounded-circle"></a>
+            <!-- <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
+              <img src="image/me1.jpg" alt="mdo" width="40" height="40" class="rounded-circle">
+            </a> -->
+            <!-- <ul class="dropdown-menu text-small" aria-labelledby="dropdownUser1"> -->
+            <!-- <ul>
+              <li><a class="dropdown-item" href="#">Profile</a></li>
+            </ul> -->
+          </li>
+
+        </div>
+
+
+
+
+        <!-- <div class="form-popup open-button" id="myForm">
+              <form action="/action_page.php" class="form-container">
+                <h1 style="text-align: center; font-family: Helvetica;">Login</h1>
+            
+                <label for="email"></label>
+                <input type="text" placeholder="Enter Email" name="email" required>
+            
+                <label for="psw"></label>
+                <input type="password" placeholder="Enter Password" name="psw" required>
+           -->
+        </form>
+    </div>
+
+
+
+    </header>
+    </div>
+
+    <div class="position-relative p-3 p-md-5 m-md-3 text-center bg-light" id="TL-image">
+      <div class="col-md-7 p-lg-5 mx-auto my-5">
+        <h1 class="display-4 fw-normal">Robot maid </h1>
+        <p class="lead fw-normal">AI maid robot Our new innovation can clean both vacuuming and mopping the house
+          cleanly. There is a sensor to detect bacteria and dust in the house. It has a built-in air purifier to keep
+          your home clean and fresh.</p>
+        <a class="btn btn-outline-secondary" href="#">Coming soon</a>
+      </div>
+      <div class="product-device shadow-sm d-none d-md-block"></div>
+      <div class="product-device product-device-2 shadow-sm d-none d-md-block"></div>
+    </div>
+
+    <!-- -------------------------colum------------------------------- -->
+
+    <div class="album py-3 bg-light">
+      <div class="container">
+
+        <h1 class="fw-normal text-center">Punny headline</h1>
+        <p class="lead fw-normal text-center">And an even wittier subheading to boot. Jumpstart your marketing efforts
+          with this
+          example based on Apple’s marketing pages.</p><br>
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-4">
+
+          <!-- start col -->
+          
+
+          <div class="col">
+            <div class="card shadow-sm">
+              <div class="card" style="width: 100%;">
+                <img src="image/E2.jpg" class="card-img-top image_box" style="width: 100%;" alt="...">
+
+                <div class="card-body">
+                  <article>
+                    <h5>เซฟ อีซี่เซฟ</h5>
+                    <p class="card-text">กวาดบ้าน ถูบ้าน จัดห้องให้เป็นระเบียบ
+                      แต่!!ระวังของมีค่าไว้ช่วงนี้จะไปไหนจะหยิบจับอะไรก็เสียตังไปหมด</p>
+                  </article>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <a href="view.html" class="btn btn-sm btn-outline-secondary">ดูรายละเอียด</a>
+                      <a href="view.html" class="btn btn-sm btn-outline-secondary">Edit</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card shadow-sm">
+              <div class="card" style="width: 100%;">
+                <img src="image/E1.jpg" class="card-img-top image_box" style="width: 100%;" alt="...">
+
+                <div class="card-body">
+                  <article>
+                    <h5>บี๋ อัษฎางค์</h5>
+                    <p class="card-text">ตีแบดอย่างเดียว เป็นสไปเดอร์แมน กวาดถูเก็บห้องจัดห้องได้
+                      ปลูกต้นไม้ดูแลต้นไม้ได้ สีพื้นหลังเป็นสีสีเขียวเหลือง สมัครเป็นแฟน สมัครเป็นแม่บ้าน สีของเส้นขอบ
+                    </p>
+                  </article>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <a href="view.html" class="btn btn-sm btn-outline-secondary">ดูรายละเอียด</a>
+                      <a href="view.html" class="btn btn-sm btn-outline-secondary">Edit</a>
+                    </div>
+                    <small class="text-muted">9 mins</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card shadow-sm">
+              <div class="card" style="width: 100%;">
+                <img src="image/E3.jpg" class="card-img-top image_box" style="width: 100%;" alt="...">
+                <!-- <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg"
+                  role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+                  <title>Placeholder</title>
+                  <rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef"
+                    dy=".3em">Thumbnail</text>
+                </svg> -->
+
+                <div class="card-body">
+                  <h5>อิ๊น จุฑามาศ</h5>
+                  <article>
+                    <p class="card-text">ถ้วยก็ไม่ล้าง ห้องไม่กวาดผมเต็มห้องเลย ผ้าห่มก็ไม่พับ
+                      แต่ล้างห้องน้ำสะอาดเอี่ยมมากกกก</p>
+                  </article>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <button type="button" class="btn btn-sm btn-outline-secondary">ดูรายละเอียด</button>
+                      <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+
+          <div class="col">
+            <div class="card shadow-sm">
+              <div class="card" style="width: 100%;">
+                <img src="image/E4.jpg" class="card-img-top image_box" style="width: 100%;" alt="...">
+                <!-- <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg"
+                  role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+                  <title>Placeholder</title>
+                  <rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef"
+                    dy=".3em">Thumbnail</text>
+                </svg> -->
+
+                <div class="card-body">
+                  <h5>เบลท์ ชนสิทธ์</h5>
+                  <article>
+                    <p class="card-text">ทำงานบ้านให้คุณผู้หญิงเก่ง เอ๊ะ ไม่แน่ใจว่างานบ้านหรือการบ้านนะ</p>
+                  </article>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <button type="button" class="btn btn-sm btn-outline-secondary">ดูรายละเอียด</button>
+                      <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                    </div>
+                    <!-- <small class="text-muted">9 mins</small> -->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="col">
+            <div class="card shadow-sm">
+              <div class="card" style="width: 100%;">
+                <img src="image/E5.jpg" class="card-img-top image_box" alt="...">
+                <!-- <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg"
+                  role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+                  <title>Placeholder</title>
+                  <rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef"
+                    dy=".3em">Thumbnail</text>
+                </svg> -->
+
+                <div class="card-body">
+                  <h5>สุดเขต ชานนท์</h5>
+                  <article>
+                    <p class="card-text">ร้องเพลงเพราะ นวดเก่ง งานบ้านไม่เท่าไหร่ เหมาะกับการจ้างไปเอน</p>
+                  </article>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <button type="button" class="btn btn-sm btn-outline-secondary">ดูรายละเอียด</button>
+                      <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                    </div>
+                    <!-- <small class="text-muted">9 mins</small> -->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card shadow-sm">
+              <div class="card" style="width: 100%;">
+                <img src="image/E6.jpg" class="card-img-top image_box" alt="...">
+
+
+                <div class="card-body">
+                  <h5>วัฒธ์ วัฒธ์ถ่อย</h5>
+                  <article>
+                    <p class="card-text">รูมเมทเก่า ทำงานบ้านดีเลย เห็นรกหน่อยฝุ่นหน่อยไม่ได้เลยต้องลุกไปจัดการ</p>
+                  </article>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <button type="button" class="btn btn-sm btn-outline-secondary">ดูรายละเอียด</button>
+                      <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                    </div>
+                    <!-- <small class="text-muted">9 mins</small> -->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card shadow-sm">
+              <div class="card" style="width: 100%;">
+                <img src="image/E7.jpg" class="card-img-top image_box" alt="...">
+
+
+                <div class="card-body">
+                  <h5>อู๋ สุกัญญา</h5>
+                  <article>
+                    <p class="card-text">ติดซีรี่ส์ไม่ไหว ติดห้องเก่ง จะไปห้องต้องบอกกล่วงหน้า จะได้เก็บห้องทัน</p>
+                  </article>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <button type="button" class="btn btn-sm btn-outline-secondary">ดูรายละเอียด</button>
+                      <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                    </div>
+                    <!-- <small class="text-muted">9 mins</small> -->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card shadow-sm">
+              <div class="card" style="width: 100%;">
+                <img src="image/E9.jpg" class="card-img-top image_box" alt="...">
+                <div class="card-body">
+                  <h5>ฮาร์ท ณัฐชนน</h5>
+                  <article>
+                    <p class="card-text">งานบ้านไม่เท่าไหร่ ไม่สิไม่เลยถ้าไม่บอกหรือบ่น เก่งอยู่อย่างเดียวคือปาก
+                      เหยดแหมม
+                    </p>
+                  </article>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <button type="button" class="btn btn-sm btn-outline-secondary">ดูรายละเอียด</button>
+                      <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                    </div>
+                    <!-- <small class="text-muted">9 mins</small> -->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+
+
+
+          <!-- ___________ -->
+        </div>
+      </div>
+    </div>
+    </div>
+
+
+    <div class="wrapper" id="B-fly">
+      <a class="button" href="Register.html">สมัครเป็นแม่บ้าน!</a>
+    </div>
+
+    <!-- Filter: https://css-tricks.com/gooey-effect/ -->
+    <svg style="visibility: hidden; position: absolute;" width="0" height="0" xmlns="http://www.w3.org/2000/svg"
+      version="1.1">
+      <defs>
+        <filter id="goo">
+          <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+          <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9" result="goo" />
+          <feComposite in="SourceGraphic" in2="goo" operator="atop" />
+        </filter>
+      </defs>
+    </svg>
+
+    <footer class="mt-auto text-black-50 text-center">
+      <p>Cool picture. <a href="https://www.instagram.com/easily.picboo/" class="text-black">Picboo</a>, by <a
+          href="https://www.instagram.com/easiesafe____/" class="text-black">@easiesafe____</a>.</p>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="">
+  <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="generator" content="Hugo 0.84.0">
+
+  <title>Kaijaa cleaning</title>
+
+
+  <style>
+    #position-center {
+      display: block;
+      margin: auto;
+    }
+
+    #RT {
+      position: absolute;
+      top: 220px;
+      right: 0px;
+      width: 500px;
+    }
+
+    #LT {
+      position: absolute;
+      top: 500px;
+      left: 0px;
+      width: 500px;
+    }
+
+    /* กำหนดตำแหน่งที่แน่นอน
+ด้านขวา 0px ทำให้ติดขอบด้านขวาชนิดเลย
+ความกว้างของกรอบข้อความ
+ความหนา รูปแบบ สีของเส้นขอบ
+ขยายขอบของข้อความ */
+
+    #BCT {
+      position: fixed;
+      right: 20px;
+      bottom: 20px;
+      margin: 1rem;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    .nav a {
+      text-decoration: none;
+      display: block;
+      padding-left: 15px;
+      border-bottom: 1px solid #888;
+      transition: .3s;
+    }
+
+
+    .nav a {
+      border-bottom: none;
+    }
+
+    /* .nav a:hover {
+  background-color: #ccc;
+} */
+
+    .nav>ul>li {
+      text-align: center;
+    }
+
+    .nav>ul>li>a {
+      padding-left: 0;
+    }
+
+
+
+    .nav li ul {
+      position: absolute;
+      display: none;
+      width: inherit;
+    }
+
+    .nav li:hover ul {
+      display: block;
+    }
+
+    .nav li ul li {
+      display: block;
+    }
+
+
+
+    /* Add styles to the form container */
+    .form-container {
+      border-radius: 5%;
+      max-width: 600px;
+      padding: 30px;
+      background-color: rgb(210, 210, 210);
+
+
+    }
+
+    /* Full-width input fields */
+    .form-container input[type=text],
+    .form-container input[type=password] {
+      width: 100%;
+      padding: 15px;
+      margin: 5px 0 22px 0;
+      border: none;
+      background: #f1f1f1;
+    }
+
+    /* When the inputs get focus, do something */
+    .form-container input[type=text]:focus,
+    .form-container input[type=password]:focus {
+      background-color: #ddd;
+      outline: none;
+    }
+
+    /* Set a style for the submit/login button */
+    .form-container .btn {
+      background-color: rgb(0, 34, 255);
+      color: white;
+      padding: 16px 20px;
+      border: none;
+      cursor: pointer;
+      width: 100%;
+      margin-bottom: 10px;
+      opacity: 0.8;
+    }
+
+    /* Add a red background color to the cancel button */
+    .form-container .cancel {
+      background-color: rgb(255, 255, 255);
+    }
+
+    /* Add some hover effects to buttons */
+    .form-container .btn:hover,
+    .open-button:hover {
+      opacity: 35;
+
+    }
+
+    #TL-image {
+      display: block;
+      margin: auto;
+      background-image: url("image/01.jpg");
+      /* The image used */
+      height: 550px;
+      width: 1518px;
+      /* You must set a specified height */
+      background-position: center;
+      /* Center the image */
+      background-repeat: no-repeat;
+      /* Do not repeat the image */
+      background-size: cover;
+      /* Resize the background image to cover the entire container */
+    }
+
+    #TR-image {
+      display: block;
+      margin: auto;
+      background-image: url("image/omg.jpg");
+      /* The image used */
+      height: 800px;
+      width: 800px;
+      /* You must set a specified height */
+      background-position: center;
+      /* Center the image */
+      background-repeat: no-repeat;
+      /* Do not repeat the image */
+      background-size: cover;
+      /* Resize the background image to cover the entire container */
+    }
+
+
+    #T-on {
+
+      color: blueviolet;
+    }
+
+    body {
+      background-color: black;
+    }
+
+    #rc {
+      border-radius: 25px;
+      padding: 20px;
+      width: 1080px;
+      height: 1080px;
+      background-color: beige;
+    }
+
+    /*  roundCorners */
+
+    .gradiant-bg {
+      font-size: 30px;
+      font-weight: bold;
+      background: linear-gradient(45deg, #ffa69e, #faf3dd, #b8f2e6, #aed9e0, #5e6472);
+      background-size: 50%;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+
+      animation: gradient 5s infinite;
+    }
+
+    @keyframes gradient {
+      50% {
+        background-position: 0% 50%;
+      }
+
+      100% {
+        background-position: 100% 50%;
+      }
+    }
+
+    .gradiant-backg {
+      background: linear-gradient(45deg, #ffa69e, #faf3dd, #b8f2e6, #aed9e0);
+      background-size: 100%;
+
+    }
+
+    @keyframes gradient {
+      0% {
+        background-position: 0% 50%;
+      }
+
+      100% {
+        background-position: 100% 50%;
+      }
+    }
+  </style>
+  <link rel="stylesheet" href="css/all.min.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/bootstrap.bundle.min.js">
+  <!-- <link rel="stylesheet" href="css/popup.css"> -->
+</head>
+
+<body>
+  <!-- navbar -->
+  <main>
+
+    <div class="container">
+      <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-0">
+        <a href="/" class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none">
+          <img src="image/MAID.png" style="width: 30%;height: 30%;"><text x="50%" y="50%" fill="#aaa"
+            dy=".3em"><b></b></text>
+          <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap">
+            <use xlink:href="#bootstrap"></use>
+          </svg>
+        </a>
+
+        <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
+          <li class="nav-item"><a href="index.html" class="nav-link px-2 link-dark">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                class="feather feather-file" aria-hidden="true">
+              </svg>Home</a></li>
+
+          <li class="nav-item"><a href="product.html" class="nav-link px-2 link-dark">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                class="feather feather-file" aria-hidden="true">
+              </svg>Product</a></li>
+          <li class="nav-item"><a href="history.html" class="nav-link px-2 link-dark">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                class="feather feather-file" aria-hidden="true">
+              </svg>Usage history</a></li>
+          <li class="nav-item"><a href="settings.html" class="nav-link px-2 link-dark">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                class="feather feather-file" aria-hidden="true">
+              </svg>Settings</a></li>
+          <li class="nav-item"><a href="about.html" class="nav-link px-2 link-dark">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                class="feather feather-file" aria-hidden="true">
+              </svg>About</a></li>
+        </ul>
+
+        <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
+          <input type="search" class="form-control" placeholder="Search..." aria-label="Search">
+        </form>
+
+        <!-- profileUser -->
+        <div class="nav">
+
+          <li class="Profile"><a href="Profile.html">
+              <img src="image/me1.jpg" alt="mdo" width="40" height="40" class="rounded-circle"></a>
+          </li>
+
+        </div>
+      </header>
+    </div>
+
+  </main>
+
+<!--  -->
+<div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2" class="active" aria-current="true"></button>
+    <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3" class=""></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item">
+      <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"></rect></svg>
+
+      <div class="container">
+        <div class="carousel-caption text-start">
+          <h1>Example headline.</h1>
+          <p>Some representative placeholder content for the first slide of the carousel.</p>
+          <p><a class="btn btn-lg btn-primary" href="#">Sign up today</a></p>
+        </div>
+      </div>
+    </div>
+    <div class="carousel-item active">
+      <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"></rect></svg>
+
+      <div class="container">
+        <div class="carousel-caption">
+          <h1>Another example headline.</h1>
+          <p>Some representative placeholder content for the second slide of the carousel.</p>
+          <p><a class="btn btn-lg btn-primary" href="#">Learn more</a></p>
+        </div>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"></rect></svg>
+
+      <div class="container">
+        <div class="carousel-caption text-end">
+          <h1>One more for good measure.</h1>
+          <p>Some representative placeholder content for the third slide of this carousel.</p>
+          <p><a class="btn btn-lg btn-primary" href="#">Browse gallery</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+<!--  -->
+
+  <div class="row featurette ">
+    <div class="p-4 col-md-7 " id="TL-image">
+      <h1 class="featurette-heading " id="T-on">Litsen to me!! <span class="text-muted">Hello Easy people.</span></h1>
+      <p class="lead">Are you looking far a house cleaning helper.</p>
+
+      <div>
+        <section class="text-lg-end container" id="RT">
+          <div class="row py-lg-5">
+            <div class=" mx-auto">
+              <h1 class="fw-light ">Oh look at that ass</h1>
+              <p class="lead text-muted">Why is your ass so attractive? The most obnoxious But it's just as cute.
+              </p>
+              <p>
+                <a href="#" class="btn btn-primary my-2">hit the ass</a>
+              </p>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <!--  -->
+      <div class="p-1 gradiant-backg rounded-3" style="width: 50%;" id="LT">
+        <div class="container-fluid ">
+          <h1 class="display-6 fw-bold">Kaijaa cleaning</h1>
+          <p class="col-md-12 ">Are you looking far a house cleaning helper.You're on the right track Our Kaijaa is a
+            company that provides help in cleaning and taking care of your home.</p>
+
+        </div>
+      </div>
+
+      <!--  -->
+    </div>
+
+
+
+
+    <!-- 1 -->
+
+    <div class="p-5 mb-2 bg-light rounded-3">
+      <div class="container-fluid ">
+        <h1 class="display-5 fw-bold gradiant-bg">Make your home more pleasant</h1>
+        <p class="col-md-8 fs-4">Our housewives are very talented. You can do everything including housework, gardening,
+          mechanic work. Let us take care of your home. Let us be like your neighbor when you need help, just look, we have everything you need.</p>
+        <button class="btn btn-primary btn-lg" type="button">Our housewives </button>
+      </div>
+    </div>
+
+    <div class="row align-items-md-stretch">
+      <div class="col-md-6">
+        <div class="h-100 p-5 text-white bg-dark rounded-3">
+          <h2>Change the background</h2>
+          <p>Swap the background-color utility and add a `.text-*` color utility to mix up the jumbotron look. Then, mix
+            and match with additional component themes and more.</p>
+          <button class="btn btn-outline-light" type="button">Example button</button>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="h-100 p-5 bg-light border rounded-3">
+          <h2>Add borders</h2>
+          <p>Or, keep it light and add a border for some added definition to the boundaries of your content. Be sure to
+            look under the hood at the source HTML here as we've adjusted the alignment and sizing of both column's
+            content for equal-height.</p>
+          <button class="btn btn-outline-secondary" type="button">Example button</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- /1 -->
+
+    <div class="Left-1">
+      <section class="py-5 text-center ">
+        <div class="row py-lg-5">
+          <div class="mx-auto">
+            <h1 class="fw-light">กำลังสร้างมองข้ามไปก่อน</h1>
+            <p class="lead text-muted">ขอโทษที่เข้าไปเป็นมะริงกิงกอง สะละนองกองแกง ง้องแง้งง้องแง้งในชีวิตเธอ</p>
+            <p>
+              <a href="#" class="btn btn-primary my-2">สมัครเป็นแฟน</a>
+              <a href="#" class="btn btn-secondary my-2">เป็นได้แค่เพื่อน,พี่,น้อง</a>
+            </p>
+          </div>
+        </div>
+      </section>
+    </div>
+    <!--  -->
+    <div class="row align-items-md-stretch" id="position-center">
+      <div class="col">
+        <div class="h-100 p-5 text-white bg-dark rounded-3 text-center">
+          <h2>Arikato Kosimute</h2>
+          <p>Swap the background-color utility and add a `.text-*` color utility to mix up the jumbotron look. Then, mix
+            and match with additional component themes and more.</p>
+
+        </div>
+      </div>
+    </div>
+
+    <!--  -->
+    <div class="gradiant-backg">
+      <marquee direction="lefe" scrollamount="5" width="100%">
+        <div class="gradiant-bg">
+          EASIESAFE
+        </div>
+      </marquee>
+    </div>
+    <!-- สีพื้นหลังเป็นสีสีเขียวเหลือง ข้อความวิ่งไปทางซ้าย ความเร็วในการวิ่ง 5 ใช้ขอบเขตครึ่งหน้ากระดาษ -->
+
+    <!-- <h4 style="background-color: aqua;">EASIESAFE</h4> -->
+
+
+    <script src="js/bootstrap.min.js"></script>
+
+
+
+    <script>
+      function openForm() {
+        document.getElementById("myForm").style.display = "block";
+      }
+
+      function closeForm() {
+        document.getElementById("myForm").style.display = "none";
+      }
+    </script>
+
+    <!-- BCT -->
+    <div class="nav">
+
+      <li class="Profile" id="BCT"><a href="https://www.facebook.com/safe.ptrp.7">
+          <img src="image/MAID1.png" alt="mdo" width="60" height="60" class="rounded-circle"></a>
+      </li>
+
+    </div>
+    <!-- /BCT -->
+
+    <footer class="mt-auto text-black-50 text-center">
+      <p>Cool picture. <a href="https://www.instagram.com/easily.picboo/" class="text-black">Picboo</a>, by <a
+          href="https://www.instagram.com/easiesafe____/" class="text-black">@easiesafe____</a>.</p>
+    </footer>
+</body>
+
+</html>
